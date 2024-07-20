@@ -16,7 +16,7 @@ public class Main {
         station.check((Bicycle) bicycle);
         station.check(bicycle2);
         station.check((Truck) truck);
-
         station.check(truck2);
+        bicycle.checkEngine();
     }
 }

@@ -1,4 +1,4 @@
-public class Vehicle implements Service{
+public abstract class Vehicle implements Service{
     private String modelName;
     private int wheelsCount;
 
