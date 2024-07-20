@@ -1,4 +1,4 @@
-public abstract class Vehicle implements Service{
+public abstract class Vehicle implements Service {
     private String modelName;
     private int wheelsCount;
 
@@ -6,16 +6,8 @@ public abstract class Vehicle implements Service{
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
     }
 
     public Vehicle(String modelName, int wheelsCount) {
@@ -24,22 +16,22 @@ public abstract class Vehicle implements Service{
     }
 
     @Override
-    public void repair() {
+    public void check() {
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
 
     }
 
-    @Override
     public void updateTyre() {
-
+        System.out.println("Меняем покрышку");
     }
 
-    @Override
     public void checkEngine() {
-
+        System.out.println("Проверяем двигатель");
     }
 
-    @Override
     public void checkTrailer() {
-
+        System.out.println("Проверяем прицеп");
     }
 }
